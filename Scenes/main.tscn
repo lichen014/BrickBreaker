@@ -8,9 +8,10 @@
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Paddle" parent="." instance=ExtResource("1_bokhs")]
+[node name="Paddle" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_bokhs")]
 position = Vector2(2.08165e-12, 283)
 collision_layer = 2
+camera = NodePath("../Camera2D")
 
 [node name="Ball" parent="." instance=ExtResource("2_jgq78")]
 visibility_layer = 14
