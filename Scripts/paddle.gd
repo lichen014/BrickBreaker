@@ -14,8 +14,9 @@ var is_ball_started = false
 @onready var collision_shape_2d = $CollisionShape2D
 
 func _ready():
-		camera_rect = camera.get_viewport_rect()
-		half_paddle_width = collision_shape_2d.shape.get_rect().size.x / 2 * scale.x
+	ball.life_lost.connect(on_ball_lost)
+	camera_rect = camera.get_viewport_rect()
+	half_paddle_width = collision_shape_2d.shape.get_rect().size.x / 2 * scale.x
 
 func _physics_process(delta):
 	linear_velocity = speed * direction
@@ -42,3 +43,6 @@ func _input(event):
 		ball._start_ball()
 		is_ball_started = true
 	
+func on_ball_lost():
+	is_ball_started = false
+	direction = Vector2.ZERO

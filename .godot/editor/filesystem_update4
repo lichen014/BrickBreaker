@@ -4,3 +4,7 @@ res://Scenes/ball.tscn
 res://Scenes/wall.tscn
 res://Scripts/paddle.gd
 res://Scenes/ball.gd
+res://Scenes/death_zone.gd
+res://Scenes/death_zone.tscn
+res://Scenes/ui.tscn
+res://Scripts/ui.gd
