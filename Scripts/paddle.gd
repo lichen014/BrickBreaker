@@ -44,5 +44,4 @@ func _input(event):
 		is_ball_started = true
 	
 func on_ball_lost():
-	is_ball_started = false
-	direction = Vector2.ZERO
+	is_ball_started = falsection = Vector2.ZERO
